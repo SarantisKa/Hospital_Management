@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class GUI {
+public class Patient_GUI {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -34,7 +34,7 @@ public class GUI {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GUI window = new GUI();
+					Patient_GUI window = new Patient_GUI();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -46,7 +46,7 @@ public class GUI {
 	/**
 	 * Create the application.
 	 */
-	public GUI() {
+	public Patient_GUI() {
 		initialize();
 	}
 
