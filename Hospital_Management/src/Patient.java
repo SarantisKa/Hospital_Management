@@ -115,18 +115,17 @@ public class Patient {
 	}
 	public void save(){
 		connector = new Connector(this);
-		PatientList.addPatient(this);
 		this.connector.save();
 	}
 	public void delete(){
 		this.connector.delete();
 	}
 	public ArrayList<Patient> getData(){
-		ArrayList<Patient> patients = new ArrayList<Patient>(PatientList.getPatients());
+		ArrayList<Patient> patients = new ArrayList<Patient>(this.connector.patientslist());
 		return patients;
 	}
 	public Patient search(int amka){
-		return (this.connector.search());
+		return (this.connector.search(amka));
 	}
 
 }
